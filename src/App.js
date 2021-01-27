@@ -1,6 +1,11 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
+import Contacto from '../views/Contacto';
+import Inicio from '../views/Inicio';
+import Nosotros from '../views/Nosotros';
+
+
 //const shortid = require("shortid");
 import shortid from "shortid";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -25,7 +30,7 @@ export default function App() {
 
       <Switch>
         <Route path="/about">
-          <h3>about</h3>
+          <Contacto>
         </Route>
         <Route path="/users">
           <h3>users</h3>
