@@ -1,13 +1,19 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./style.css";
-import Contacto from "../views/Contacto";
-import Inicio from "../views/Inicio";
-import Nosotros from "../views/Nosotros";
+import Contacto from "./views/Contacto";
+import Inicio from "./views/Inicio";
+import Nosotros from "./views/Nosotros";
 
 //const shortid = require("shortid");
 import shortid from "shortid";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
 
 export default function App() {
   return (
@@ -16,13 +22,31 @@ export default function App() {
       <nav>
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/"
+              className="btn btn-primary"
+              activeClassName="active"
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <NavLink
+              to="/about"
+              className="btn btn-primary"
+              activeClassName="active"
+            >
+              Contacto
+            </NavLink>
           </li>
           <li>
-            <Link to="/users">Users</Link>
+            <NavLink
+              to="/users"
+              className="btn btn-primary"
+              activeClassName="active"
+            >
+              Nosotros
+            </NavLink>
           </li>
         </ul>
       </nav>
